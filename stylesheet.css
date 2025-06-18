@@ -147,34 +147,59 @@ li {
   body {
     padding: 10px;
   }
-  
+
   /* 个人信息区域 */
   table > tbody > tr > td {
     display: block;
     width: 100% !important;
+    box-sizing: border-box;
   }
-  
+
   /* 头像 */
-  td[style*="width:40%"] {
+  td[style*="width:40%"], td[style*="max-width:40%"] {
     padding-top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
   }
-  
+
   /* 新闻和出版物 */
   .papertitle {
     font-size: 14px;
     line-height: 1.3;
   }
-  
+
   /* 工作经历和项目 */
   table[width="100%"] td {
     display: block;
     width: 100% !important;
     text-align: center;
   }
-  
+
   /* 杂项列表 */
   ul {
     padding-left: 20px;
+  }
+
+  /* publication图片和内容上下排列 */
+  table[style*="width:100%"] tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  table[style*="width:100%"] tr td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+    padding: 5px !important;
+  }
+
+  .one img, .one {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 /* Add this to reduce space between publication items */
@@ -205,13 +230,13 @@ table[style*="width:100%"] tr td[style*="width:75%"] {
   .name {
     font-size: 20px;
   }
-  
+
   /* 链接栏垂直排列 */
   p[style*="text-align:center"] a {
     display: block;
     margin: 8px 0;
   }
-  
+
   /* 缩小出版物图片 */
   .one img {
     width: 100% !important;
