@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Girl avatar icon</title>
+  <desc id="desc">A minimalist girl avatar with dark hair and blue hair tips on a white background.</desc>
+  <rect width="128" height="128" rx="28" fill="#fff"/>
+
+  <defs>
+    <linearGradient id="hairBase" x1="64" y1="18" x2="64" y2="111" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#313a52"/>
+      <stop offset=".5" stop-color="#171d2c"/>
+      <stop offset="1" stop-color="#0f1522"/>
+    </linearGradient>
+    <linearGradient id="hairBlue" x1="31" y1="62" x2="97" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7de2ff"/>
+      <stop offset=".5" stop-color="#2aa8ff"/>
+      <stop offset="1" stop-color="#1767d7"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="64" y1="40" x2="64" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe4d7"/>
+      <stop offset="1" stop-color="#ffc7b8"/>
+    </linearGradient>
+    <clipPath id="round">
+      <circle cx="64" cy="64" r="54"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="64" cy="64" r="54" fill="#f7fbff"/>
+
+  <g clip-path="url(#round)">
+    <path d="M34 113c5-18 16-29 30-29s25 11 30 29z" fill="#eef5fc"/>
+    <path d="M45 114c3-11 10-18 19-18s16 7 19 18z" fill="#dcebf7"/>
+
+    <g transform="rotate(-7 64 64)">
+    <path d="M25 68c0-31 16-50 39-50 21 0 32 18 32 47 0 21-6 37-14 49H46c-13-13-21-29-21-46z" fill="url(#hairBase)"/>
+    <path d="M24 59c-6 11-6 28 1 42 7 12 19 17 38 13-16-14-18-38-12-64-12 0-22 3-27 9z" fill="url(#hairBlue)"/>
+
+    <path d="M43 59c2-18 10-29 21-29s19 11 21 29c3 24-6 39-21 39S40 83 43 59z" fill="url(#skin)"/>
+    <path d="M40 72c-5 0-8 3-7 8 1 6 5 9 10 8z" fill="#ffd4c6"/>
+    <path d="M88 72c5 0 8 3 7 8-1 6-5 9-10 8z" fill="#ffd4c6"/>
+
+    <path d="M36 61c4-15 9-25 15-33 5 9 18 16 36 18-4-18-12-28-23-28-18 0-31 15-28 43z" fill="#20283b"/>
+    <path d="M36 60c14-5 24-14 30-27 5 9 12 15 21 18-4-19-13-31-23-31-16 0-31 14-28 40z" fill="#2b344d"/>
+    <path d="M49 25c-4 15-12 27-26 38 13-2 31-16 39-30 7 8 15 13 25 15-7-18-18-26-38-23z" fill="#182032"/>
+
+    <path d="M48 67c4-3 9-3 13 0" fill="none" stroke="#263044" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M67 67c4-3 9-3 13 0" fill="none" stroke="#263044" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M59 81c3 2 7 2 10 0" fill="none" stroke="#b85e69" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="50" cy="75" r="4" fill="#ff9fad" opacity=".32"/>
+    <circle cx="78" cy="75" r="4" fill="#ff9fad" opacity=".32"/>
+
+    <path d="M35 60c-10 13-11 30-3 41 6 8 16 11 29 9" fill="none" stroke="#8de7ff" stroke-width="3.8" stroke-linecap="round" opacity=".78"/>
+    </g>
+  </g>
+
+  <circle cx="64" cy="64" r="53.5" fill="none" stroke="#dce7f2"/>
+</svg>

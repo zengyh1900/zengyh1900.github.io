@@ -14,7 +14,7 @@ description: Designed and delivered an end-to-end AI animation pipeline for a na
 
 ## MagicMaker
 url: https://magicmaker.openxlab.org.cn/home
-image: images/magicmaker.png
+image: images/magicmaker.svg
 role: Product Owner & Tech Lead
 description: MagicMaker is a user-friendly AI platform that enables seamless image generation, editing, and animation. It empowers users to transform their imagination into captivating cinema and animations with ease.
 
