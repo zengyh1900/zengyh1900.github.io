@@ -19,6 +19,7 @@ description: Short text shown on the homepage.
 - `node scripts/preview-homepage.mjs --queue --send`: enqueue a preview request for the local preview service. Use this after IM-requested page changes because it works from Codex sandboxed sessions without connecting to `localhost`.
 - `node scripts/preview-homepage.mjs --request --send`: optional trusted-shell fallback that asks the local preview service over `127.0.0.1:9765`; do not use it as the default IM workflow because some Codex sandboxes block local socket connections.
 - `node scripts/preview-homepage.mjs --send`: direct fallback for trusted, unsandboxed shells; starts a temporary static server, captures a screenshot with Playwright, and sends it through cc-connect.
+- `scripts/publish-homepage.sh [commit message]`: host-side publish entrypoint for IM-approved releases. It runs checks, stages repository changes, commits with the provided message or `update`, and pushes the current branch.
 - `pre-commit run --all-files`: run the configured whitespace, line-ending, YAML/JSON, merge-conflict, large-file, and codespell checks.
 - `git status --short`: check pending changes before committing.
 
@@ -44,4 +45,4 @@ Recent commits use short, lowercase messages such as `refactor`, `update`, and `
 
 ## Agent-Specific Instructions
 
-Keep edits small and repository-local. Do not add build tooling unless the task explicitly requires it. Avoid rewriting unrelated content files while making targeted updates. After IM-requested changes, run `node scripts/preview-homepage.mjs --queue --send` to ask the host-side preview service to render the page and send the screenshot for confirmation, then commit and push only after the user approves. If the queue service is unavailable and the shell is unsandboxed, use `node scripts/preview-homepage.mjs --request --send` or `node scripts/preview-homepage.mjs --send` as the fallback.
+Keep edits small and repository-local. Do not add build tooling unless the task explicitly requires it. Avoid rewriting unrelated content files while making targeted updates. After IM-requested changes, run `node scripts/preview-homepage.mjs --queue --send` to ask the host-side preview service to render the page and send the screenshot for confirmation, then commit and push only after the user approves. In IM sessions, treat the user's `/publish-homepage [message]` command as the approval path for host-side commit and push. If the queue service is unavailable and the shell is unsandboxed, use `node scripts/preview-homepage.mjs --request --send` or `node scripts/preview-homepage.mjs --send` as the fallback.
