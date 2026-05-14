@@ -230,6 +230,19 @@ img {
   font-weight: 700;
 }
 
+.profile-slogan {
+  margin: 0 0 18px;
+  padding: 0;
+  color: #384454;
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+}
+
+.profile-slogan strong {
+  color: var(--text);
+}
+
 .notice {
   margin: 18px 0 0;
   border-left: 5px solid var(--notice-border);

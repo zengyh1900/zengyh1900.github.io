@@ -1,7 +1,5 @@
 # Selected Publications
 
-Only list some first-author or corresponding-author papers here.
-
 ## Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation
 url: https://reward-forcing.github.io/
 image: images/rewardforcing.png

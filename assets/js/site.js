@@ -125,6 +125,7 @@
       <section id="about" class="section hero">
         <div>
           <h1 class="profile-name">${renderInline(profile.name)}</h1>
+          ${profile.slogan ? `<blockquote class="profile-slogan">${renderInline(profile.slogan)}</blockquote>` : ''}
           <p>${renderInline(profile.bio)}</p>
           ${profile.notice ? `<div class="notice">${renderInline(profile.notice)}</div>` : ''}
           <div class="profile-links">${links}</div>

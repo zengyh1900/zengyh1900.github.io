@@ -4,6 +4,7 @@
 name: Yanhong Zeng 曾艳红
 avatar: images/profiles/me-lol.gif
 bio: Yanhong Zeng is a Research Scientist & Engineer at [Ant Group](https://www.antresearch.com/). Previously at [Shanghai AI Lab](https://www.shlab.org.cn/), she served as the Lead Core Maintainer of [MMagic](https://github.com/open-mmlab/mmagic). She received her Ph.D. degree from the joint Ph.D. program between [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) and [Sun Yat-sen University](https://www.sysu.edu.cn/sysuen/). Her work bridges the gap between research and production, developing _high-quality, controllable, and efficient_ multi-modal models, with a current focus on **video generation and world models**.
+slogan: Career is a series of **projects** and **people**; choose both wisely.
 notice: 💗 Hiring self-motivated interns for long-term opportunities!
 links:
 - [Email](mailto:zengyh1900@gmail.com)

@@ -1,1 +1,8 @@
+.cc-connect/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+homepage-preview*.png
 .DS_Store
