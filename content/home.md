@@ -21,6 +21,22 @@ items:
 - **[2024.01]** 🔥 We release [MagicMaker](https://magicmaker.openxlab.org.cn/home), an AI platform that supports image generation, editing and animation!
 - **[2023.12]** 🔥 We release [MMagic](https://github.com/open-mmlab/mmagic), an open-source multimodal advanced, generative, and intelligent creation toolbox.
 
+## Mentees
+items:
+- [Haobo Li](https://github.com/HaobroLi)
+- [Yixuan Li](https://yixuanli98.github.io/)
+- [Yunhong Lu](https://github.com/JaydenLyh)
+- [Dingbang Huang](https://scholar.google.com/citations?user=rzwhKccAAAAJ&hl=en)
+- [Kexian Tang](https://scholar.google.com/citations?user=cXjomd8AAAAJ&hl=zh-CN)
+- [Jianzong Wu](https://jianzongwu.github.io/)
+- [Jiaxing Li](https://scholar.google.com/citations?user=LNtaU5YAAAAJ&hl=en)
+- [Junyao Gao](https://jeoyal.github.io/home/)
+- [Junhao Zhuang](https://zhuang2002.github.io/)
+- [Junshu Tang](https://junshutang.github.io/)
+- [Baiang Li](https://ztmotalee.github.io/)
+- [Youqing Fang](https://github.com/FangYouqing)
+- [Yiming Zhang](https://ymzhang0319.github.io/)
+
 ## Miscellanea
 items:
 - **Conference Reviewer:** CVPR, ICCV, ECCV, SIGGRAPH, ICML, ICLR, NeurIPS, AAAI.

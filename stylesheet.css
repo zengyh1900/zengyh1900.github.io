@@ -280,6 +280,17 @@ img {
   padding: 18px 20px;
 }
 
+.mentees-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 18px 20px;
+}
+
+.mentee-item a {
+  font-weight: 700;
+}
+
 .item-list {
   display: grid;
   gap: 18px;

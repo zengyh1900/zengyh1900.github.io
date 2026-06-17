@@ -213,6 +213,14 @@
     return section('publications', 'Selected Publications', `${note}<div class="item-list">${items}</div>`);
   }
 
+  function renderMentees(mentees) {
+    const items = parseList(mentees.items)
+      .map((item) => `<span class="mentee-item">${renderInline(item)}</span>`)
+      .join('');
+
+    return section('mentees', 'Mentees', `<div class="panel mentees-panel">${items}</div>`);
+  }
+
   function renderMisc(misc) {
     const items = parseList(misc.items)
       .map((item) => `<li>${renderInline(item)}</li>`)
@@ -241,6 +249,7 @@
         renderProjects(projects),
         renderPublications(publications, parseIntro(publicationMarkdown)),
         renderExperience(experience),
+        renderMentees(byTitle(home, 'Mentees')),
         renderMisc(byTitle(home, 'Miscellanea')),
       ].join('');
     } catch (error) {
