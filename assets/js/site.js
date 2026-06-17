@@ -218,7 +218,7 @@
       .map((item) => `<span class="mentee-item">${renderInline(item)}</span>`)
       .join('');
 
-    return section('mentees', 'Mentees', `<div class="panel mentees-panel">${items}</div>`);
+    return section('mentees', 'Mentees & Student Collaborators', `<div class="panel mentees-panel">${items}</div>`);
   }
 
   function renderMisc(misc) {
@@ -249,7 +249,7 @@
         renderProjects(projects),
         renderPublications(publications, parseIntro(publicationMarkdown)),
         renderExperience(experience),
-        renderMentees(byTitle(home, 'Mentees')),
+        renderMentees(byTitle(home, 'Mentees & Student Collaborators')),
         renderMisc(byTitle(home, 'Miscellanea')),
       ].join('');
     } catch (error) {

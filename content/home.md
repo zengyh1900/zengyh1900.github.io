@@ -21,7 +21,7 @@ items:
 - **[2024.01]** 🔥 We release [MagicMaker](https://magicmaker.openxlab.org.cn/home), an AI platform that supports image generation, editing and animation!
 - **[2023.12]** 🔥 We release [MMagic](https://github.com/open-mmlab/mmagic), an open-source multimodal advanced, generative, and intelligent creation toolbox.
 
-## Mentees
+## Mentees & Student Collaborators
 items:
 - [Haobo Li](https://github.com/HaobroLi)
 - [Yixuan Li](https://yixuanli98.github.io/)
