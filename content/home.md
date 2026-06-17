@@ -27,6 +27,7 @@ items:
 - [Yixuan Li](https://yixuanli98.github.io/)
 - [Yunhong Lu](https://github.com/JaydenLyh)
 - [Dingbang Huang](https://scholar.google.com/citations?user=rzwhKccAAAAJ&hl=en)
+- [Zhenzhi Wang](https://zhenzhiwang.github.io/)
 - [Kexian Tang](https://scholar.google.com/citations?user=cXjomd8AAAAJ&hl=zh-CN)
 - [Jianzong Wu](https://jianzongwu.github.io/)
 - [Jiaxing Li](https://scholar.google.com/citations?user=LNtaU5YAAAAJ&hl=en)
