@@ -2,14 +2,16 @@
 
 ## Profile
 name: Yanhong Zeng 曾艳红
+homepage: https://zengyh1900.github.io/
 avatar: images/profiles/me-lol.gif
 bio: Yanhong Zeng is a Research Scientist & Engineer at [Ant Group](https://www.antresearch.com/). Previously at [Shanghai AI Lab](https://www.shlab.org.cn/), she served as the Lead Core Maintainer of [MMagic](https://github.com/open-mmlab/mmagic). She received her Ph.D. degree from the joint Ph.D. program between [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) and [Sun Yat-sen University](https://www.sysu.edu.cn/sysuen/). Her work bridges the gap between research and production, developing _high-quality, controllable, and efficient_ multi-modal models, with a current focus on **video generation and world models**.
+summary: Yanhong Zeng is a Research Scientist & Engineer at [Ant Group](https://www.antresearch.com/), specializing in video generation. Previously at [Shanghai AI Lab](https://www.shlab.org.cn/), she served as the **Lead Core Maintainer** of [MMagic (7k+ Stars, 1k+ Forks)](https://github.com/open-mmlab/mmagic). Her work bridges the gap between research and production, developing **high-quality, controllable, and scalable** multi-modal models, with a current focus on _streaming video generation and world models_.
 slogan: Career is a series of projects and people; choose both wisely.
 notice: 💗 Hiring self-motivated interns for long-term opportunities! Current openings focus on world model research, including interactive video generation and controllable simulated worlds.
 links:
 - [Email](mailto:zengyh1900@gmail.com)
 - [Google Scholar](https://scholar.google.com/citations?user=14LbnMIAAAAJ&hl=en)
-- [Twitter](https://twitter.com/zengyh1900)
+- [Twitter/X](https://twitter.com/zengyh1900)
 - [Github](https://github.com/zengyh1900/)
 - [Linkedin](https://www.linkedin.com/in/zengyh1900/)
 
@@ -37,12 +39,3 @@ items:
 - [Baiang Li](https://ztmotalee.github.io/)
 - [Youqing Fang](https://github.com/FangYouqing)
 - [Yiming Zhang](https://ymzhang0319.github.io/)
-
-## Miscellanea
-items:
-- **Conference Reviewer:** CVPR, ICCV, ECCV, SIGGRAPH, ICML, ICLR, NeurIPS, AAAI.
-- **Journal Reviewer:** TIP, TVCG, TMM, TCSVT.
-- **Tutorial Organizer (ICCV 2023):** [MMagic: Multimodal Advanced, Generative and Intelligent Creation](https://www.bilibili.com/video/BV1P94y187HE/?spm_id_from=333.999.0.0&vd_source=4a2f786f73e4f84c86d5a2e1db9d6e97)
-- **Tutorial Organizer (AAAI 2023):** [Generative AI and Low-level Vision with MMEditing](https://openmmlab.com/community/aaai2023-lab)
-- **Tutorial Organizer (CVPR 2023):** [Learning to Generate, Edit, and Enhance Images and Videos with MMagic](https://www.bilibili.com/video/BV1nX4y1q7DF/?spm_id_from=333.999.0.0&vd_source=4a2f786f73e4f84c86d5a2e1db9d6e97)
-- **Invited Talk:** Towards High-Quality Image Inpainting ([Microsoft China Video Center on Bilibili Live 2019](https://www.bilibili.com/video/BV1YJ411E7et/?spm_id_from=333.999.0.0))

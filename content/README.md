@@ -1,12 +1,15 @@
 # Content Editing Guide
 
-The homepage is rendered from Markdown-like files in this folder.
+The homepage and CV are rendered from Markdown-like files in this folder. Treat `content/` as the source of truth; generated files under `cv/` should not be edited by hand.
 
-- `home.md`: profile, news, mentees/student collaborators, and miscellanea.
-- `experience.md`: working experience cards.
-- `projects.md`: project cards. These render before publications.
-- `publications.md`: selected publication cards.
-- `others.md`: converted publications that are kept as structured content but not rendered on the homepage by default.
+- `home.md`: profile, CV biography summary, news, and mentees/student collaborators.
+- `experience.md`: homepage experience logos plus CV experience roles and bullets.
+- `projects.md`: homepage project cards only.
+- `publications.md`: selected homepage publication cards plus CV bibliography metadata.
+- `others.md`: additional bibliography metadata and non-homepage publication records.
+- `skills.md`: CV technical skills.
+- `education.md`: CV education entries.
+- `services.md`: homepage miscellanea plus CV services and activities.
 
 Each card starts with a second-level heading:
 
@@ -14,11 +17,19 @@ Each card starts with a second-level heading:
 ## Card Title
 url: https://example.com
 image: images/example.png
-role: Optional role or label
-description: Short paragraph shown on the page.
+role: Optional homepage role or label
+description: Short text shown on the homepage.
 ```
 
-For `experience.md`, only `url` and `image` are used. The homepage renders all experience entries as linked logos in one compact block.
+For `experience.md`, homepage rendering uses only `url` and `image`. CV rendering reads `roles:` blocks:
+
+```md
+roles:
+- Research Scientist & Engineer | Hangzhou, China | Apr. 2025 – present
+  - **[Project](https://example.com) (Role).** CV bullet text.
+```
+
+For `publications.md` and `others.md`, `bibkey`, `type`, `bib-authors`, `booktitle` or `journal`, `year`, and optional `pages` fields generate `cv/main.bib`. Use `selected: false` for entries that should stay in the BibTeX file but be excluded from the CV bibliography.
 
 For the `Mentees & Student Collaborators` section in `home.md`, add linked names under `items:`:
 

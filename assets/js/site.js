@@ -4,6 +4,7 @@
     experience: 'content/experience.md',
     projects: 'content/projects.md',
     publications: 'content/publications.md',
+    services: 'content/services.md',
   };
 
   const app = document.getElementById('app');
@@ -231,17 +232,19 @@
 
   async function boot() {
     try {
-      const [homeMarkdown, experienceMarkdown, projectMarkdown, publicationMarkdown] = await Promise.all([
+      const [homeMarkdown, experienceMarkdown, projectMarkdown, publicationMarkdown, servicesMarkdown] = await Promise.all([
         loadMarkdown(sources.home),
         loadMarkdown(sources.experience),
         loadMarkdown(sources.projects),
         loadMarkdown(sources.publications),
+        loadMarkdown(sources.services),
       ]);
 
       const home = parseDocument(homeMarkdown);
       const experience = parseDocument(experienceMarkdown);
       const projects = parseDocument(projectMarkdown);
       const publications = parseDocument(publicationMarkdown);
+      const services = parseDocument(servicesMarkdown);
 
       app.innerHTML = [
         renderProfile(byTitle(home, 'Profile')),
@@ -250,7 +253,7 @@
         renderPublications(publications, parseIntro(publicationMarkdown)),
         renderExperience(experience),
         renderMentees(byTitle(home, 'Mentees & Student Collaborators')),
-        renderMisc(byTitle(home, 'Miscellanea')),
+        renderMisc(byTitle(services, 'Miscellanea')),
       ].join('');
     } catch (error) {
       app.innerHTML = `

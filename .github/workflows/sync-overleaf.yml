@@ -1,0 +1,40 @@
+name: Sync CV to Overleaf
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-overleaf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      OVERLEAF_REMOTE_URL: ${{ secrets.OVERLEAF_REMOTE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check generators
+        run: node --check scripts/render-cv.mjs && node --check scripts/render-all.mjs
+
+      - name: Render CV
+        run: node scripts/render-cv.mjs --out cv
+
+      - name: Push to Overleaf
+        if: env.OVERLEAF_REMOTE_URL != ''
+        working-directory: cv
+        run: |
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "sync cv from ${GITHUB_SHA}"
+          git branch -M master
+          git push --force "$OVERLEAF_REMOTE_URL" master:master
+
+      - name: Skip Overleaf sync
+        if: env.OVERLEAF_REMOTE_URL == ''
+        run: echo "::warning::OVERLEAF_REMOTE_URL is not configured; rendered CV but skipped Overleaf push."

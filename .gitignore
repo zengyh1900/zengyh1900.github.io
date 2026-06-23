@@ -1,4 +1,5 @@
 .cc-connect/
+/cv/
 .env
 .env.*
 *.key
