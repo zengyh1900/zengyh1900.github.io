@@ -33,12 +33,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "sync cv from ${GITHUB_SHA}"
-          git branch -M master
+          git branch -M main
           if [ -n "$OVERLEAF_GIT_TOKEN" ]; then
             AUTH_HEADER="$(printf 'git:%s' "$OVERLEAF_GIT_TOKEN" | base64 | tr -d '\n')"
-            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" push --force "$OVERLEAF_REMOTE_URL" HEAD:master
+            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" push --force "$OVERLEAF_REMOTE_URL" HEAD:main
           else
-            git push --force "$OVERLEAF_REMOTE_URL" HEAD:master
+            git push --force "$OVERLEAF_REMOTE_URL" HEAD:main
           fi
 
       - name: Skip Overleaf sync
