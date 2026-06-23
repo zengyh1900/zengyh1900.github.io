@@ -26,19 +26,32 @@ jobs:
 
       - name: Push to Overleaf
         if: env.OVERLEAF_REMOTE_URL != ''
-        working-directory: cv
         run: |
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "sync cv from ${GITHUB_SHA}"
-          git branch -M main
           if [ -n "$OVERLEAF_GIT_TOKEN" ]; then
             AUTH_HEADER="$(printf 'git:%s' "$OVERLEAF_GIT_TOKEN" | base64 | tr -d '\n')"
-            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" push --force "$OVERLEAF_REMOTE_URL" HEAD:main
+            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" clone --branch main "$OVERLEAF_REMOTE_URL" overleaf-repo
           else
-            git push --force "$OVERLEAF_REMOTE_URL" HEAD:main
+            git clone --branch main "$OVERLEAF_REMOTE_URL" overleaf-repo
+          fi
+
+          find overleaf-repo -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R cv/. overleaf-repo/
+
+          cd overleaf-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No CV changes to sync."
+            exit 0
+          fi
+
+          git commit -m "sync cv from ${GITHUB_SHA}"
+          if [ -n "$OVERLEAF_GIT_TOKEN" ]; then
+            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" push origin main
+          else
+            git push origin main
           fi
 
       - name: Skip Overleaf sync
