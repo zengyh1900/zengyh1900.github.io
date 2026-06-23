@@ -13,6 +13,7 @@ jobs:
       contents: read
     env:
       OVERLEAF_REMOTE_URL: ${{ secrets.OVERLEAF_REMOTE_URL }}
+      OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,7 +34,12 @@ jobs:
           git add .
           git commit -m "sync cv from ${GITHUB_SHA}"
           git branch -M master
-          git push --force "$OVERLEAF_REMOTE_URL" master:master
+          if [ -n "$OVERLEAF_GIT_TOKEN" ]; then
+            AUTH_HEADER="$(printf 'git:%s' "$OVERLEAF_GIT_TOKEN" | base64 | tr -d '\n')"
+            git -c http.extraHeader="AUTHORIZATION: basic $AUTH_HEADER" push --force "$OVERLEAF_REMOTE_URL" HEAD:master
+          else
+            git push --force "$OVERLEAF_REMOTE_URL" HEAD:master
+          fi
 
       - name: Skip Overleaf sync
         if: env.OVERLEAF_REMOTE_URL == ''
