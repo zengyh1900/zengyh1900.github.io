@@ -111,7 +111,7 @@ booktitle: CVPR
 year: 2022
 pages: 5036--5045
 selected: true
-url: https://arxiv.org/abs/2111.10337
+url: https://openaccess.thecvf.com/content/CVPR2022/html/Xue_Advancing_High-Resolution_Video-Language_Representation_With_Large-Scale_Video_Transcriptions_CVPR_2022_paper.html
 image: images/hdvila.png
 authors: **Yanhong Zeng***, Hongwei Xue*, Tiankai Hang*, Yuchong Sun*, Bei Liu, Huan Yang, Jianlong Fu, Baining Guo
 venue: CVPR, 2022

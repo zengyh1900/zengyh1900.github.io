@@ -96,6 +96,33 @@
       .map((line) => line.replace(/^-\s*/, ''));
   }
 
+  function parseMarkdownLink(link) {
+    const match = String(link || '').match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return match ? { label: match[1].trim(), url: match[2].trim() } : null;
+  }
+
+  function isPdfLink(link) {
+    const markdownLink = parseMarkdownLink(link);
+    const label = markdownLink ? markdownLink.label : link;
+    return String(label || '').trim().toLowerCase() === 'pdf';
+  }
+
+  function renderPublicationLink(link) {
+    const markdownLink = parseMarkdownLink(link);
+    if (markdownLink && isPdfLink(link)) {
+      return `<a class="meta-link pdf-link" href="${escapeHtml(markdownLink.url)}" aria-label="PDF" title="PDF"></a>`;
+    }
+
+    return `<span class="meta-link">${renderInline(link)}</span>`;
+  }
+
+  function putPdfLinksFirst(links) {
+    return [
+      ...links.filter((link) => isPdfLink(link)),
+      ...links.filter((link) => !isPdfLink(link)),
+    ];
+  }
+
   function byTitle(records, title) {
     return records.find((record) => record.title === title) || {};
   }
@@ -189,8 +216,8 @@
 
   function renderPublications(records, intro) {
     const items = records.map((item) => {
-      const links = parseList(item.links)
-        .map((link) => `<span class="meta-link">${renderInline(link)}</span>`)
+      const links = putPdfLinksFirst(parseList(item.links))
+        .map((link) => renderPublicationLink(link))
         .join('');
       const badge = item.badge ? `<img class="badge" src="${escapeHtml(item.badge)}" alt="GitHub stars">` : '';
 
